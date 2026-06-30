@@ -9,8 +9,9 @@
 <!-- ============================================================
      EDIT THESE if your links change:
      ARTWORK_URL — your Etsy shop (prints / artwork)
-     FONTS_URL   — where fonts are sold (defaults to the same Etsy
-                   shop; point it at a dedicated fonts page later)
+     FONTS_URL   — where fonts are sold. The Type Foundry tile is set to
+                   "Coming soon" for now; when you have a vendor URL, paste
+                   it below and restore the tile to a link (see note in body).
 ============================================================ -->
 <script>
   var ARTWORK_URL = "https://www.etsy.com/shop/maisonduzenith";
@@ -63,6 +64,9 @@
   .card .k{font-family:"Tara Deco","Futura PT",sans-serif;font-size:1.7rem;letter-spacing:.06em;color:var(--brass-bright)}
   .card .d{font-family:"Futura PT",Futura,"Century Gothic",sans-serif;font-size:.82rem;letter-spacing:.04em;opacity:.82;max-width:24ch;line-height:1.5}
   .card .go{font-family:"Futura PT",sans-serif;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-top:4px}
+  .card.soon{cursor:default;opacity:.72}
+  .card.soon:hover{border-color:var(--line);transform:none;background:rgba(201,162,75,.03)}
+  .card.soon .go{color:rgba(239,231,212,.45)}
   footer{position:relative;z-index:1;margin-top:46px;font-family:"Futura PT",sans-serif;
     font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,231,212,.55)}
   footer a{color:var(--brass);text-decoration:none;border-bottom:1px solid transparent}
@@ -87,11 +91,11 @@
         <span class="d">Original Art Deco prints &amp; designs</span>
         <span class="go">Shop on Etsy →</span>
       </a>
-      <a class="card" id="fonts" href="#">
+      <div class="card soon" id="fonts" aria-disabled="true">
         <span class="k">Type Foundry</span>
         <span class="d">Display typefaces, featuring Tara Deco</span>
-        <span class="go">Browse fonts →</span>
-      </a>
+        <span class="go">Coming soon</span>
+      </div>
     </div>
   </main>
 
@@ -99,7 +103,6 @@
 
   <script>
     document.getElementById('art').href = ARTWORK_URL;
-    document.getElementById('fonts').href = FONTS_URL;
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
