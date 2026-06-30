@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison du Zénith — Art Deco Artwork & Type</title>
+<meta name="description" content="Maison du Zénith — Art Deco prints and display typefaces. Shop original artwork, or explore the type foundry.">
+
+<!-- ============================================================
+     EDIT THESE if your links change:
+     ARTWORK_URL — your Etsy shop (prints / artwork)
+     FONTS_URL   — where fonts are sold (defaults to the same Etsy
+                   shop; point it at a dedicated fonts page later)
+============================================================ -->
+<script>
+  var ARTWORK_URL = "https://www.etsy.com/shop/maisonduzenith";
+  var FONTS_URL   = "https://www.etsy.com/shop/maisonduzenith";
+</script>
+
+<style>
+  @font-face{font-family:"Tara Deco";src:url("TaraDeco.woff2") format("woff2");font-display:swap}
+  :root{
+    --ink:#0e0d0b; --brass:#c9a24b; --brass-bright:#e8c879; --cream:#efe7d4;
+    --line:rgba(201,162,75,.30);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%}
+  body{
+    background:var(--ink); color:var(--cream);
+    font-family:"Tara Deco","Futura PT",Futura,"Century Gothic","Trebuchet MS",sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; position:relative; overflow:hidden; padding:54px 22px;
+  }
+  .rays{position:absolute;top:-42vmax;left:50%;transform:translateX(-50%);
+    width:130vmax;height:130vmax;pointer-events:none;opacity:.14;
+    background:repeating-conic-gradient(from 0deg at 50% 0%,var(--brass) 0deg .5deg,transparent .5deg 9deg);
+    -webkit-mask-image:radial-gradient(60% 60% at 50% 0%,#000,transparent 70%);
+            mask-image:radial-gradient(60% 60% at 50% 0%,#000,transparent 70%)}
+  .frame{position:fixed;inset:18px;border:1px solid var(--line);pointer-events:none;z-index:0}
+  .corner{position:fixed;width:26px;height:26px;border:2px solid var(--brass);z-index:0;pointer-events:none}
+  .corner.tl{top:18px;left:18px;border-right:0;border-bottom:0}
+  .corner.tr{top:18px;right:18px;border-left:0;border-bottom:0}
+  .corner.bl{bottom:18px;left:18px;border-right:0;border-top:0}
+  .corner.br{bottom:18px;right:18px;border-left:0;border-top:0}
+  .stage{position:relative;z-index:1;max-width:920px;width:100%}
+  .eyebrow{font-family:"Futura PT",Futura,"Century Gothic",sans-serif;letter-spacing:.42em;
+    text-transform:uppercase;font-size:.7rem;color:var(--brass);margin:0 0 24px;padding-left:.42em}
+  h1{font-family:"Tara Deco","Futura PT",sans-serif;font-weight:400;line-height:.9;margin:0;
+    font-size:clamp(2.7rem,10vw,6.6rem);letter-spacing:.04em;color:var(--cream)}
+  h1 .of{display:block;font-size:.42em;letter-spacing:.34em;color:var(--brass-bright);margin:.16em 0}
+  .bulbs{display:flex;gap:13px;justify-content:center;margin:30px 0 40px}
+  .bulbs span{width:7px;height:7px;border-radius:50%;background:var(--brass);
+    box-shadow:0 0 10px 1px rgba(232,200,121,.5)}
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:720px;margin:0 auto}
+  @media (max-width:560px){.paths{grid-template-columns:1fr}}
+  .card{
+    display:flex;flex-direction:column;align-items:center;gap:14px;
+    border:1px solid var(--line);padding:34px 26px;text-decoration:none;color:var(--cream);
+    background:rgba(201,162,75,.03);transition:border-color .18s ease,transform .18s ease,background .18s ease}
+  .card:hover,.card:focus-visible{border-color:var(--brass);transform:translateY(-3px);background:rgba(201,162,75,.07)}
+  .card:focus-visible{outline:3px solid var(--cream);outline-offset:3px}
+  .card .k{font-family:"Tara Deco","Futura PT",sans-serif;font-size:1.7rem;letter-spacing:.06em;color:var(--brass-bright)}
+  .card .d{font-family:"Futura PT",Futura,"Century Gothic",sans-serif;font-size:.82rem;letter-spacing:.04em;opacity:.82;max-width:24ch;line-height:1.5}
+  .card .go{font-family:"Futura PT",sans-serif;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-top:4px}
+  footer{position:relative;z-index:1;margin-top:46px;font-family:"Futura PT",sans-serif;
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,231,212,.55)}
+  footer a{color:var(--brass);text-decoration:none;border-bottom:1px solid transparent}
+  footer a:hover,footer a:focus-visible{border-bottom-color:var(--brass)}
+  footer a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+  <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+  <div class="rays" aria-hidden="true"></div>
+
+  <main class="stage">
+    <p class="eyebrow">Atlanta · Established MMXXVI</p>
+    <h1>Maison<span class="of">du</span>Zénith</h1>
+    <div class="bulbs" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+
+    <div class="paths">
+      <a class="card" id="art" href="#">
+        <span class="k">Artwork</span>
+        <span class="d">Original Art Deco prints &amp; designs</span>
+        <span class="go">Shop on Etsy →</span>
+      </a>
+      <a class="card" id="fonts" href="#">
+        <span class="k">Type Foundry</span>
+        <span class="d">Display typefaces, featuring Tara Deco</span>
+        <span class="go">Browse fonts →</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>© <span id="yr"></span> Maison du Zénith&nbsp;&nbsp;·&nbsp;&nbsp;<a href="license.html">Font License</a></footer>
+
+  <script>
+    document.getElementById('art').href = ARTWORK_URL;
+    document.getElementById('fonts').href = FONTS_URL;
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
